@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Остров спасения</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        {% load static %}
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+           <div class="container">
+               <a class="navbar-brand" href="http://127.0.0.1:8000/about/">Django kittens</a>
+<!--               <a class="navbar-brand" href="/about/">About</a>-->
+<!--               <a class="navbar-brand" href="/contacts/">Contact</a>-->
+<!--               <button class="navbar-toggler" type="button" data-toggle="collapse"-->
+<!--                       data-target="#navbarResponsive"-->
+<!--                       data-target="#navbarResponsive"-->
+<!--                       aria-controls="navbarResponsive" aria-expanded="false"-->
+<!--                       aria-label="Toggle navigation">-->
+<!--                   <span class="navbar-toggler-icon"></span>-->
+<!--               </button>-->
+               <div class="collapse navbar-collapse" id="navbarResponsive">
+                   <ul class="navbar-nav ml-auto">
+                       <li class="nav-item">
+                           <a class="nav-link" href="/contacts/">Контакты</a>
+                       </li>
+                     <li class="nav-item active">
+                           <a class="nav-link" href="/personal/">Для сотрудников
+                               <span class="sr-only">(current)</span>
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+        </nav>
+        <!-- Page Header-->
+            {% load static %}
+        <header class="masthead" style="background-image: url('http://127.0.0.1:8000/static/assets/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Найди своего друга!</h1>
+                            <span class="subheading">Шустрый! Быстрый! Питомец пушистый!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+{% block content %}
+        {{ flatpage.content }}
+        <hr>
+        <h1>И еще раз</h1>
+        <hr>
+        {{ flatpage.content }}
+{% endblock content %}
